@@ -1,28 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Sidebar from './components/Sidebar'
+import Grid from './components/Grid';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+
+	state = {
+		places: [
+			{
+				title: "Stewart Beach",
+				city: "Galveston",
+				image: "galveston.jpeg",
+				volunteers: 5,
+				date: "May 18th, 2019",
+				likes: 25	
+			},
+			{
+				title: "Buffalo Bayou",
+				city: "Texas",
+				image: "houston.jpeg",
+				volunteers: 3,
+				date: "June 8th, 2019",
+				likes: 15				
+			},
+			{
+				title: "Conroe Street & Morris Street",
+				city: "Dallas",
+				image: "dallas.jpeg",
+				volunteers: 2,
+				date: "Minimum volunteers not met!",
+				likes: 1				
+			}
+		]
+	}
+		
+
+  	render() {
+    	return (
+      		<div className="App flex">
+      			<Sidebar />
+				<Grid {...this.state} />
+      		</div>
+    	);
+  	}
 }
 
 export default App;
