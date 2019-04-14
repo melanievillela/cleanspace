@@ -42,13 +42,6 @@ class Sidebar extends Component {
                         <option value="25">25 miles</option>
                         <option value="50+">50+ miles</option>
                     </select>
-                    <h3>Date</h3>
-                    <select>
-                        <option value="default">Select</option>
-                        <option value="1-week">1 week</option>
-                        <option value="1-month">1 month</option>
-                        <option value="3-month">3+ months</option>
-                    </select>
                 </div>
                 
                 <div id="modal" className="flex column hide">
